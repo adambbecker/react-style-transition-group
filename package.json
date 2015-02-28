@@ -1,0 +1,30 @@
+{
+  "name": "react-style-transition-group",
+  "version": "1.0.0",
+  "description": "Same as React's CSSTransitionGroup, but uses style updates instead of class updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adambbecker/react-style-transition-group"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "inline-styles"
+  ],
+  "author": "Adam B. Becker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adambbecker/react-style-transition-group/issues"
+  },
+  "homepage": "https://github.com/adambbecker/react-style-transition-group",
+  "devDependencies": {
+    "react": "^0.12.0"
+  },
+  "peerDependencies": {
+    "react": "^0.12.0"
+  }
+}
