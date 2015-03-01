@@ -1,7 +1,7 @@
 {
   "name": "react-style-transition-group",
-  "version": "1.0.0",
-  "description": "Same as React's CSSTransitionGroup, but uses style updates instead of class updates",
+  "version": "0.0.0",
+  "description": "Similar to React's CSSTransitionGroup, but uses style updates instead of class updates",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
