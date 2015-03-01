@@ -21,10 +21,7 @@
     "url": "https://github.com/adambbecker/react-style-transition-group/issues"
   },
   "homepage": "https://github.com/adambbecker/react-style-transition-group",
-  "devDependencies": {
-    "react": "^0.12.0"
-  },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^0.12.0"
   }
 }

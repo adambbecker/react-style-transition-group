@@ -12,14 +12,13 @@
 
 'use strict';
 
-var React = require('React');
+var React = require('react');
 
-// var CSSCore = require('CSSCore');
-var CSSPropertyOperations = require('CSSPropertyOperations');
-var ReactTransitionEvents = require('ReactTransitionEvents');
+var CSSPropertyOperations = require('react/lib/CSSPropertyOperations');
+var ReactTransitionEvents = require('react/lib/ReactTransitionEvents');
 
-var onlyChild = require('onlyChild');
-var warning = require('warning');
+var onlyChild = require('react/lib/onlyChild');
+var warning = require('react/lib/warning');
 
 // We don't remove the element from the DOM until we receive an animationend or
 // transitionend event. If the user screws up and forgets to add an animation
