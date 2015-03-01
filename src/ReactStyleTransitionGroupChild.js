@@ -18,7 +18,6 @@ var CSSPropertyOperations = require('react/lib/CSSPropertyOperations');
 var ReactTransitionEvents = require('react/lib/ReactTransitionEvents');
 
 var onlyChild = require('react/lib/onlyChild');
-var warning = require('react/lib/warning');
 
 // We don't remove the element from the DOM until we receive an animationend or
 // transitionend event. If the user screws up and forgets to add an animation
@@ -29,19 +28,6 @@ var NO_EVENT_TIMEOUT = 5000;
 
 var noEventListener = null;
 
-
-if (__DEV__) {
-  noEventListener = function() {
-    warning(
-      false,
-      'transition(): tried to perform an animation without ' +
-      'an animationend or transitionend event after timeout (' +
-      '%sms). You should either disable this ' +
-      'transition in JS or add a CSS animation/transition.',
-      NO_EVENT_TIMEOUT
-    );
-  };
-}
 
 var ReactStyleTransitionGroupChild = React.createClass({
   displayName: 'ReactStyleTransitionGroupChild',
@@ -66,9 +52,6 @@ var ReactStyleTransitionGroupChild = React.createClass({
       if (e && e.target !== node) {
         return;
       }
-      if (__DEV__) {
-        clearTimeout(noEventTimeout);
-      }
 
       ReactTransitionEvents.removeEndEventListener(node, endListener);
 
@@ -85,10 +68,6 @@ var ReactStyleTransitionGroupChild = React.createClass({
 
     // Need to do this to actually trigger a transition.
     this.queueStyles(transitionActiveStyles);
-
-    if (__DEV__) {
-      noEventTimeout = setTimeout(noEventListener, NO_EVENT_TIMEOUT);
-    }
   },
 
   queueStyles: function(styles) {
