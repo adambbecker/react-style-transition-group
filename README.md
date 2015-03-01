@@ -12,10 +12,14 @@ Sometimes however, those attributes need to be dynamically generated at run time
 
 # Example
 
-The example below is a menu of vertical items that have transition timing & transform values relevant to the number of items being drawn.
+The example below is a theoretical menu of vertical items that have transition timing & transform values relevant to the number of items being drawn.
 
 ```js
+var ReactStyleTransitionGroup = require( 'react-style-transition-group' );
+
 var menuClass = React.createClass( {
+
+  // ...
 
   render: function() {
     var navItems = this.props.navItems.map( function( navItem, index ) {
@@ -83,6 +87,12 @@ With [npm](https://npmjs.org) do:
 
 ```
 npm install git://github.com/adambbecker/react-style-transition-group.git
+```
+
+And require it just like other components:
+
+```js
+var ReactStyleTransitionGroup = require( 'react-style-transition-group' );
 ```
 
 # License
